@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>OrganicWala</title>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .btn-1 {
+        background: rgb(190, 90, 5);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px;
+        width: 150px;
+        box-shadow: 2px 2px 1px 1px rgb(43, 53, 52);
+      }
+
+      .btn-1:hover {
+        background: rgb(172, 80, 4);
+        box-shadow: 1px 1px 1px 1px rgb(43, 53, 52);
+      }
+
+      body 
+      {
+        margin: 0; /* Remove default body margin */
+        padding: 0; /* Remove default body padding */
+        text-align: center; 
+        background-color: #67e55e;
+        width: 100%;
+      }
+      .details_box
+      {
+        width: 250px;
+        height: auto;
+        background-color: #ec6e2f;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 10%;
+        padding: 3%;
+        margin-top: 40px;
+      }
+      #logo
+      {
+        position:relative;
+        top: 20px;
+        width: 25%;
+      }
+
+      select 
+      {
+        padding: 7px;
+        margin: 5px;
+        border-radius: 7px;
+      }
+      /* #Enter
+      {
+        margin-top: 3%;
+        background-color: orange;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        border-radius: 25px; /* Adjust the value to control the roundness 
+      } */
+    </style>
+  </head>
+  <body>
+
+    <!-- <img id = "logo1" src="images/logo1.png" alt=""> -->
+    <img id = "logo" src="images/logo.png" alt="">
+    
+    <div class="details_box">
+      <h3>SELECT STATE</h3>
+      <select class="selectBox" id="state" name="state">
+        <option value="Telangana">Telangana</option>
+        <option value="Andhra Pradesh">Andhra Pradesh</option>
+        <option value="Karnataka">Karnataka</option>
+        <option value="Tamil Nadu">Tamil Nadu</option>
+        <!-- Add more options as needed -->
+      </select>
+      <br/><br/><br/>
+      <h3>SELECT YOUR LANGUAGE</h3>
+      <select class="selectBox" id="language" name="language">
+        <option value="English">English</option>
+        <!-- <option value="spanish">Spanish</option>
+        <option value="german">German</option>
+        <option value="french">French</option> -->
+        <option value="Telugu">Telugu</option>
+
+        <!-- Add more options as needed -->
+      </select>
+
+    </div>
+
+    <!-- <button id = "Enter" type="button" onclick="location.href='products-2.html'" name="ENTER">ENTER</button> -->
+    
+    <button class="btn-1" onclick="location.href='products.html'">ENTER</button>
+
+    <script>
+      localStorage.setItem('state', "Telangana");
+      localStorage.setItem('language', "English");
+
+      document.getElementById('state').addEventListener('change', (event) => {
+        localStorage.setItem('state', event.target.value);
+      });
+      document.getElementById('language').addEventListener('change', (event) => {
+        localStorage.setItem('language', event.target.value);
+      });
+    </script>
+  </body>
+</html>
